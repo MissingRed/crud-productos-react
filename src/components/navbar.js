@@ -8,13 +8,17 @@ const Navbar = () => {
       <h1 className="header__title">VENTAS</h1>
       <div className="header__items">
         <Link to="/" className="header__items--link">
-          Clientes
+          <img src="/images/users.svg" />
+          <p>Clientes</p>
         </Link>
         <Link to="/Facturas" className="header__items--link">
-          Facturas
+          <img src="/images/file-text.svg" />
+          <p>Facturas</p>
         </Link>
         <Link to="/Productos" className="header__items--link">
-          Productos
+          <img src="/images/shopping-bag.svg" />
+
+          <p>Productos</p>
         </Link>
       </div>
     </header>

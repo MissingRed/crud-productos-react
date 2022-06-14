@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Navbar from "./navbar";
 
 const URI = "http://localhost:8000/productos/";
 
@@ -31,31 +32,34 @@ const EditProducto = () => {
   };
 
   return (
-    <div>
-      <h3>Edit POST</h3>
-      <form onSubmit={update}>
-        <div className="mb-3">
-          <label className="form-label">Nombre Producto</label>
-          <input
-            value={nombre_producto}
-            onChange={(e) => setNombre_producto(e.target.value)}
-            type="text"
-            className="form-control"
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Valor</label>
-          <textarea
-            value={valor}
-            onChange={(e) => setValor(e.target.value)}
-            type="text"
-            className="form-control"
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Actualizar
-        </button>
-      </form>
+    <div className="home">
+      <Navbar />
+      <div>
+        <h3>Edit POST</h3>
+        <form onSubmit={update}>
+          <div className="mb-3">
+            <label className="form-label">Nombre Producto</label>
+            <input
+              value={nombre_producto}
+              onChange={(e) => setNombre_producto(e.target.value)}
+              type="text"
+              className="form-control"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Valor</label>
+            <textarea
+              value={valor}
+              onChange={(e) => setValor(e.target.value)}
+              type="text"
+              className="form-control"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Actualizar
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

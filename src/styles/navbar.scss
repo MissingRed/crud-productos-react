@@ -14,14 +14,19 @@
     padding: 20px;
     flex-direction: column-reverse;
     &--link {
-      background: rgb(59, 59, 255);
       padding: 10px;
-      padding-left: 20px;
+      padding-left: 10px;
       padding-right: 50px;
       margin-bottom: 20px;
-      color: white;
+      color: black;
       text-decoration: none;
       border-radius: 5px;
+      display: flex;
+
+      p {
+        margin: 0;
+        margin-left: 7px;
+      }
     }
   }
 }
